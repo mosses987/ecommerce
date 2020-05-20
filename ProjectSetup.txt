@@ -1,0 +1,179 @@
+
+1. Below is the application.properties  for setting up database in my loacl Mysql workbench.
+	Please configure the application.properties file accordingly and use server.port as 8083
+	
+				spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce?useSSL=false&serverTimezone=UTC
+				spring.datasource.username=hbstudent
+				spring.datasource.password=hbstudent
+				server.port=8083
+				
+
+2. create data tables in the mysql workbench using given createTables.sql
+				
+3. Launch product springBoot application in any Java IDE
+
+4. Open ecommerce application in any JavaScript support IDE (VSCode), open terminal and type following commands
+	
+	a) npm install
+	b) npm start
+	
+==========================================================SETTING UP ROLES=========================================
+
+1. Add entries to roles database using below API and body in Postman client
+
+	API--->  Post Method :   http://localhost:8083/roles
+			 
+		First PayLoad:
+			
+			{
+				"role": "Admin",
+				"username": "admin",
+				"password": "admin"
+
+			}
+			
+			
+		Second PayLoad:
+			
+			{
+				"role": "User",
+				"username": "mosses",
+				"password": "mosses"
+
+			}
+			
+			
+===================================================Add test data for listing products===========================================================
+
+
+2. Add Test data to database using below API and body in Postman client
+
+		API-----> Post Method   http://localhost:8083/products/
+		
+		First PayLoad:
+		
+		{
+                "image": "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675",
+                "name": "IronMan",
+                "description": "1gb",
+                "category": "Enterainment",
+                "productInfo": {
+                    "width": "1mm",
+                    "height": "1mm",
+                    "weight": "0.1kg",
+                    "price": 100,
+                    "quantity": 1,
+                    "shippingFee": 55
+                    }
+        }
+		
+		Second PayLoad
+		
+		{ "image": "https://s3.r29static.com/bin/entry/ce2/x,80/2169674/image.jpg",
+                "name": "Thor",
+                "description": "1gb",
+                "category": "Enterainment",
+                "productInfo": {
+                    "width": "1mm",
+                    "height": "1mm",
+                    "weight": "0.1kg",
+                    "price": 100,
+                    "quantity": 1,
+                    "shippingFee": 55
+                    
+				}
+        }
+		
+		
+		Third PayLoad
+		
+		{
+                "image": "https://image.cnbcfm.com/api/v1/image/105814861-1553608877209ben-affleck-batman-1.jpg?v=1553609938&w=678&h=381",
+                "name": "Batman",
+                "description": "1gb",
+                "category": "Enterainment",
+                "productInfo": {
+                    "width": "1mm",
+                    "height": "1mm",
+                    "weight": "0.1kg",
+                    "price": 100,
+                    "quantity": 1,
+                    "shippingFee": 88
+                   
+                }
+		}
+		
+		
+		Fourth PayLoad
+		
+		
+		 {
+                "image": "https://images.samsung.com/is/image/samsung/in-front-loading-ww60m204k0stl-ww60m204k0s-tl-frontsilver-62755325?$PD_GALLERY_L_JPG$",
+                "name": "Washing machine",
+                "description": "Front Door",
+                "category": "Home Applaince",
+                "productInfo": {
+                    "width": "50cm",
+                    "height": "80cm",
+                    "weight": "10kg",
+                    "price": 10000,
+                    "quantity": 1,
+                    "shippingFee": 90
+                }
+        }
+		
+		
+		Fifth PayLoad
+		
+		{
+                "image": "https://images.samsung.com/is/image/samsung/in-front-loading-ww60m204k0stl-ww60m204k0s-tl-frontsilver-62755325?$PD_GALLERY_L_JPG$",
+                "name": "Television",
+                "description": "LED",
+                "category": "Home Applaince",
+                "productInfo": {
+                    "width": "3mm",
+                    "height": "50cm",
+                    "weight": "2kg",
+                    "price": 1000,
+                    "quantity": 1,
+                    "shippingFee": 90
+                    
+                }
+		}
+		
+		
+		Sixth PayLoad
+		
+		{
+                "image": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
+                "name": "Hulk",
+                "description": "Entertainment",
+                "category": "Entertainment",
+                "productInfo": {
+                    "width": "jj",
+                    "height": "jj",
+                    "weight": "jj",
+                    "price": 88,
+                    "quantity": 66,
+                    "shippingFee": 88
+				}
+        }
+			
+	
+	Seventh PayLoad
+	
+	{
+                "image": "https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675",
+                "name": "iphone30",
+                "description": "Mobile Phone",
+                "category": "Mobile Phone",
+                "productInfo": {
+                    "width": "q",
+                    "height": "q",
+                    "weight": "q",
+                    "price": 88,
+                    "quantity": 1,
+                    "shippingFee": 1
+                }
+				
+	}

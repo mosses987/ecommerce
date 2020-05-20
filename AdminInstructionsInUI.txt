@@ -1,0 +1,9 @@
+For Adding New Items:
+
+		1. All fields are mandatory for adding products successfully
+		2. Add an image url to display image
+		3. Price, quantity and shippingFee should be Integer type
+		
+For Updating existing Items 
+
+		1. Image Url and name field is mandatory
